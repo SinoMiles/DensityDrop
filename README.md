@@ -14,6 +14,12 @@
 
 A simple Python utility to generate Android drawable resources for different densities from a single XXXHDPI source image.
 
+## Preview
+
+<div align="center">
+    <img src="preview.jpg" alt="DensityDrop Preview" width="600" />
+</div>
+
 ## Features
 
 *   Drag and drop an image file (assumed to be XXXHDPI).
@@ -81,6 +87,12 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 # DensityDrop
 
 一个简单的 Python 工具，用于从单个 XXXHDPI 源图像生成不同密度的 Android drawable 资源。
+
+## 预览
+
+<div align="center">
+    <img src="preview.jpg" alt="DensityDrop 预览" width="600" />
+</div>
 
 ## 特性
 
