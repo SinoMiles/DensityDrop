@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="64" cy="64" r="60" fill="#3498db" opacity="0.2"/>
+  
+  <!-- Icon Elements: Squares representing different densities -->
+  <!-- xxxhdpi (largest square) -->
+  <rect x="20" y="20" width="88" height="88" rx="4" ry="4" fill="none" stroke="#2c3e50" stroke-width="3" opacity="0.9"/>
+  
+  <!-- xxhdpi -->
+  <rect x="29" y="29" width="70" height="70" rx="3" ry="3" fill="none" stroke="#2980b9" stroke-width="2.5" opacity="0.8"/>
+  
+  <!-- xhdpi -->
+  <rect x="38" y="38" width="52" height="52" rx="2" ry="2" fill="none" stroke="#3498db" stroke-width="2" opacity="0.7"/>
+  
+  <!-- hdpi -->
+  <rect x="47" y="47" width="34" height="34" rx="2" ry="2" fill="none" stroke="#5dade2" stroke-width="1.5" opacity="0.6"/>
+  
+  <!-- mdpi (smallest square) -->
+  <rect x="56" y="56" width="16" height="16" rx="1" ry="1" fill="none" stroke="#85c1e9" stroke-width="1" opacity="0.6"/>
+  
+  <!-- Downward Arrow indicating scaling down -->
+  <path d="M74,96 L84,96 L79,106 Z" fill="#e74c3c"/>
+  
+  <!-- Text: 'D' letters for 'DensityDrop' -->
+  <text x="64" y="72" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#2c3e50">DD</text>
+</svg> 

@@ -4,7 +4,7 @@ import shutil # <-- Import shutil
 from PyQt6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QLabel, QPushButton,
                              QCheckBox, QFileDialog, QMessageBox, QHBoxLayout)
 from PyQt6.QtCore import Qt, QUrl
-from PyQt6.QtGui import QDragEnterEvent, QDropEvent, QPixmap
+from PyQt6.QtGui import QDragEnterEvent, QDropEvent, QPixmap, QIcon
 from PIL import Image, ImageQt
 
 class DensityGeneratorApp(QWidget):
@@ -16,6 +16,27 @@ class DensityGeneratorApp(QWidget):
         self.default_output_dir = os.path.join(script_dir, "generated_drawables")
         self.output_dir = self.default_output_dir # Default to this path initially
         self.initUI()
+        
+        # Set window icon (try both icon.svg and icon.png as fallback)
+        self.setWindowIcon(self.load_app_icon())
+
+    def load_app_icon(self):
+        """Load the application icon from either icon.svg or icon.png file"""
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        icon_path_svg = os.path.join(script_dir, "icon.svg")
+        icon_path_png = os.path.join(script_dir, "icon.png")
+        
+        # Create an icon instance
+        icon = QIcon()
+        
+        # Try to load SVG first (preferred)
+        if os.path.exists(icon_path_svg):
+            icon.addFile(icon_path_svg)
+        # Fall back to PNG if SVG not found or didn't load properly
+        elif os.path.exists(icon_path_png):
+            icon.addFile(icon_path_png)
+            
+        return icon
 
     def initUI(self):
         self.setWindowTitle('Android Density Image Generator (Input: xxxhdpi)')
